@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="top_panel">
+        <div class="top_left"> 
+            <div>
+                <p>SEBJ</p>
+            </div>
+            <div class="unit_control">
+                <div class="switch_temp">
+                     <button type="button" id="switch_unit">Switch </button> 
+                </div> 
+               <div class="temp">  
+                    <p>current unit</p>
+                    <p id="current_unit">Celcius</p>
+                </div> 
+            </div>
+        </div>
+    
+       
+        <div class="top_right">
+            <form>
+                <label for="location">Search for a location</label>
+                <input type="text" id="location">
+                <button type="submit" id="search">search</button>
+
+        </form>
+        
+        </div>
+    </div>
+            
+
+<div class="main_panel">
+     <p id="error"></p>
+
+    <p id="weather_description"></p>
+    <p id="address"></p>
+    <p id="cords"></p>
+
+    <div id="days"></div>
+</div>
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

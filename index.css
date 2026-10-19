@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url('https://media.istockphoto.com/id/1137547114/photo/independence-arch-accra-ghana.jpg?s=612x612&w=0&k=20&c=i92l_C5U1OUneX7fOL0XXPOyDKd2ZVldvsl7-bTaGoA=');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+.top_panel {
+    width: 100%;
+    min-height: 90px;
+    color:white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 5%;
+
+    background: rgba(20, 30, 30, 0.65);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.top_left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.top_left > div:first-child p {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   UNIT CONTROL
+========================= */
+
+.unit_control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.switch_temp button {
+    border: none;
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.switch_temp button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.temp p {
+    margin: 0;
+}
+
+.temp p:first-child {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+#current_unit {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.top_right form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top_right label {
+    display: none;
+}
+
+#location {
+    width: 220px;
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+
+    backdrop-filter: blur(10px);
+}
+
+#location::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#search {
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    background: white;
+    color: #263634;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#search:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+#error {
+    position: absolute;
+
+    margin-top: 55px;
+
+    color: #ffb4b4;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MAIN WEATHER PANEL
+========================= */
+
+.main_panel {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(20, 30, 30, 0.45);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    color: aliceblue;
+}
+
+
+/* =========================
+   CURRENT WEATHER
+========================= */
+
+#weather_description {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#address {
+    margin: 8px 0;
+
+    font-size: 20px;
+}
+
+#cords {
+    margin: 0 0 25px;
+
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+
+/* =========================
+   FORECAST GRID
+========================= */
+
+#days {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   WEATHER CARD
+========================= */
+
+.box {
+
+    min-height: 170px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: rgba(24, 38, 35, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.box:hover {
+
+    transform: translateY(-5px);
+
+    background: rgba(30, 48, 44, 0.9);
+}
+
+
+/* =========================
+   CONTENT INSIDE CARD
+========================= */
+
+.mini-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.mini-box p {
+    margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .top_panel {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .top_left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .top_right {
+        width: 100%;
+    }
+
+    .top_right form {
+        width: 100%;
+    }
+
+    #location {
+        width: 100%;
+    }
+
+    #days {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .top_left {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main_panel {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #days {
+        grid-template-columns: 1fr;
+    }
+
+    #weather_description {
+        font-size: 25px;
+    }
+}
